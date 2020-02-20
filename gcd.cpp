@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//this are the two integers that are to be calculated 
 int a,b;
 
 int main()
