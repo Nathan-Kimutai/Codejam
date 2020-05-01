@@ -22,12 +22,12 @@ void insert_data(int new_data)
     //this is the part that make it doubly linked list
     if(head != NULL)
     {
-        head->prev = new_node
+        head->prev = new_node;
     }
     head = new_node;
 }
 
-void main()
+int main()
 {
     //TODO Implement the above here
     cout << "Doubly linked list" << endl;
