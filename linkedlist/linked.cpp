@@ -3,8 +3,8 @@ using namespace std;
 
 //use structs to represent ListNodes
 struct ListNode {
-				int val;
-				sturct ListNode *next;
+    int val; 
+    struct ListNode *next;
 };
 
 //head node
