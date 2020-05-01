@@ -1,1 +1,1 @@
-# Codejam
+# Preparation for Codejam
