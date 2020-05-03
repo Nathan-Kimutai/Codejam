@@ -1,5 +1,6 @@
-#include <bits/stdc++.h> 
-using namespace std; 
+#include <bits/stdc++.h>
+using namespace std;
+
 struct ListNode {
   char data;
   struct ListNode *next;
@@ -10,45 +11,32 @@ struct ListNode* current = NULL;
 
 void insert(char new_data)
 {
-  struct ListNode *link = (struct ListNode*) malloc(sizeof(struct ListNode*));
-  link->data = new_data;
-  link->next = NULL;
-  if(head == NULL)
+  //cout << "inserting data" << endl;
+  struct ListNode* new_node = (struct ListNode*) malloc(sizeof(struct ListNode*));
+  new_node->data = new_data;
+  new_node->next = NULL;
+  //if head is empty create a new  list
+  if(head==NULL)
   {
-    head = link;
-    head->next = link;
+    head = new_node;
+    head->next = new_node;
   }
   current = head;
-  
+
   while(current->next != head)
   {
     current = current->next;
   }
-  link->next = head;
-}
-
-//insert letters to the circular circular linked_list
-void setUp()
-{
-  for(int a=97; a<123; a++)
-  {
-    char r = (char) a;
-    //cout << "inserting data" << endl;
-    insert(r);
-  }
+  current->next = new_node;
+  new_node->next = head;
 }
 
 int main()
 {
-  setUp();
-  struct ListNode* ptr = head; 
-  cout << ptr->next->next->next->data;
-  while(ptr->next != head)
+  for(int a=97; a<123; a++)
   {
-    cout << ptr->data;
-    ptr = ptr->next;
+    char r = (char) a;
+    insert(r);
   }
-  cout << ptr->data << "=>";
-  cout << "[HEAD]" << endl;
+  cout << head->next->next->next->data << endl;
 }
-
