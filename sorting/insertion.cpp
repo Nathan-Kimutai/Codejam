@@ -9,6 +9,7 @@ class Solution {
     }
 };
 
+// should return an array
 int insertion_sort(int n, int arr[])
 {
     int arr[5];
