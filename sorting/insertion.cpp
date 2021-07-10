@@ -2,15 +2,8 @@
 
 using namespace std;
 
-class Solution {
-    public:
-    int solve() {
-
-    }
-};
-
 // should return an array
-int insertion_sort(int n, int arr[])
+void insertion_sort(int n, int arr[])
 {
     int arr[5];
     for(int i=1; i < n; i++) {
@@ -23,10 +16,19 @@ int insertion_sort(int n, int arr[])
         arr[j + 1] = key;
     }
 
-    return n;
+    print_arr(arr,5);
+}
+
+void print_arr(int arr[],int n) {
+    for(int i=0; i < n; i++) {
+        cout << arr[i];
+    }
+
+    cout << "\n";
 }
 
 int main()
 {
-
+    int arr[5] = {1,2,3,4,5};
+    insertion_sort(5,arr);
 }
